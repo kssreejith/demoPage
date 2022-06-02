@@ -103,6 +103,11 @@
         @content;
     }
 }
+@mixin min-screen-lg-custom-1264{
+    @media (min-width:1264px){
+        @content;
+    }
+} 
 @mixin screen-lg{
     @media (max-width:1200px){
         @content;
@@ -151,6 +156,7 @@
     }
     @else if($type =='text'){
         color:  map.get($primary, 'default'); 
+        transition: 0.2s all;
         &:disabled,&:disabled:hover,&[href=''],&[href='']:hover{
             color: map.get($primary, 'disabled'); 
             pointer-events: none;
@@ -159,6 +165,7 @@
           } 
           &:hover{
             color: map.get($primary, 'hover'); 
+            text-decoration: none;
           }
     }
     @else if($type =='svgBtn'){ 

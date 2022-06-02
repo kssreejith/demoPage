@@ -18,7 +18,7 @@
   @include min-screen-lg {
     flex-wrap: nowrap;
 
-    >.col {
+    > .col {
       margin-right: 45px;
       padding: 0;
 
@@ -38,7 +38,7 @@
   }
 
   @include screen-lg {
-    >.col {
+    > .col {
       flex: 0 0 auto;
       width: 100%;
       margin-bottom: 20px;
@@ -53,7 +53,7 @@
     padding: 0;
     border-top: 1px solid $tellwut-border-shade-1;
 
-    >.col {
+    > .col {
       padding: 24px 18px;
       margin: 0;
 
@@ -181,16 +181,25 @@
     .btn-facebook {
       color: $white;
       background-color: $facebook-blue;
+      &:hover {
+        background-color: rgba($color: $facebook-blue, $alpha: 0.8);
+      }
     }
 
     .btn-google {
       color: $white;
       background-color: $google-red;
+      &:hover {
+        background-color: rgba($color: $google-red, $alpha: 0.8);
+      }
     }
 
     .btn-apple {
       background-color: $white;
       color: $black;
+      &:hover {
+        background-color: rgba($color: $white, $alpha: 0.8);
+      }
     }
   }
 
@@ -215,6 +224,10 @@
       font-size: $tellwut--fz-14;
       text-transform: uppercase;
       text-decoration: none;
+      transition: 0.2s all;
+      &:hover {
+        color: $tellwut-border-shade-2;
+      }
     }
   }
 
@@ -387,7 +400,9 @@
       width: 100%;
       flex: 1 0 0%;
     }
-
+    @include screen-lg-custom-1264 {
+      max-width: 100%;
+    }
     @include screen-sm {
       order: 2;
     }
@@ -528,14 +543,12 @@
   .blog-slider {
     border: 1px solid $tellwut-border-shade-1;
     padding: 0;
+    margin-top: 20px;
 
-    @include min-screen-lg {
+    @include min-screen-lg-custom-1264 {
       margin-left: 20px;
       flex: 1 0 0%;
-    }
-
-    @include screen-lg {
-      margin-top: 20px;
+      margin-top: 0;
     }
 
     @include screen-sm {
@@ -547,7 +560,16 @@
     &--left {
       position: relative;
       max-width: 385px;
-
+      flex-shrink: 0;
+      height: 342px;
+      @include screen-lg-custom-1264 {
+        max-width: 525px;
+        height: 432px;
+      }
+      @include screen-lg {
+        max-width: 365px;
+        height: 432px;
+      }
       @include min-screen-sm {
         &:hover {
           .blog-slider--desc {
@@ -563,20 +585,17 @@
           }
         }
       }
-
+      .blog-slider--img {
+        height: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
       @include screen-sm {
         height: 176px;
         max-width: 100%;
-
-        .blog-slider--img {
-          height: 100%;
-
-          img {
-            height: 100%;
-            object-fit: cover;
-            width: 100%;
-          }
-        }
       }
     }
 
@@ -632,9 +651,11 @@
     }
 
     &--shade {
-      background: linear-gradient(180.46deg,
-          #0e112e 0.39%,
-          rgba(54, 63, 149, 0.05) 63.2%);
+      background: linear-gradient(
+        180.46deg,
+        #0e112e 0.39%,
+        rgba(54, 63, 149, 0.05) 63.2%
+      );
       transform: matrix(1, 0, 0, -1, 0, 0);
       position: absolute;
       top: 0;
@@ -754,7 +775,12 @@
         width: 100%;
         @extend %flex;
         @extend %flex-a-end;
-
+        @include screen-lg-custom-1264 {
+          max-width: 465px;
+        }
+        @include screen-lg {
+          max-width: 365px;
+        }
         @include screen-sm {
           max-width: 100%;
           align-items: center;
@@ -803,12 +829,12 @@
         }
 
         .btn-dark-fit {
-          height: 100%; 
+          height: 100%;
           border-radius: 0;
           max-width: 122px;
           width: 100%;
           padding: 20px 11px 20px 24px;
-          @include buttonStates($tellwut--theme-blue-btn); 
+          @include buttonStates($tellwut--theme-blue-btn);
 
           @include screen-sm {
             padding: 8px 17px;
@@ -816,11 +842,11 @@
           }
         }
 
-        .btn-primary-fit { 
+        .btn-primary-fit {
           border-radius: 0;
           width: 100%;
           padding: 20px 11px 20px 24px;
-          @include buttonStates($tellwut-dark-blue-btn); 
+          @include buttonStates($tellwut-dark-blue-btn);
 
           @include screen-sm {
             padding: 8px 4px 8px 18px;
@@ -908,7 +934,7 @@
 .review-rewards {
   margin-top: 20px;
 
-  >.col {
+  > .col {
     @extend %flex;
     border: 1px solid $tellwut-border-shade-1;
     margin-right: 20px;
@@ -923,10 +949,15 @@
     width: 100%;
     background-color: $trust-green;
 
-    @include screen-lg-custom-1264 {
+    @include screen-lg {
+      max-width: 50%;
+      margin-top: 0;
+      margin-right: 20px;
+    }
+    @include screen-md {
       max-width: 100%;
-      margin-top: 20px;
       margin-right: 0;
+      margin-bottom: 20px;
     }
   }
 
@@ -938,9 +969,8 @@
     max-width: 351px;
     width: 100%;
 
-    @include screen-lg-custom-1264 {
-      max-width: 550px;
-      margin-top: 20px;
+    @include screen-lg {
+      max-width: 50%;
     }
 
     @include screen-md {
@@ -1128,9 +1158,10 @@
     @extend %flex-column;
     max-width: 515px;
     width: 100%;
-
-    @include screen-md {
+    @include screen-lg {
       max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 20px;
     }
 
     @include screen-sm {
@@ -1278,8 +1309,11 @@
     }
   }
 }
-.join-now-btn{
-  max-width: 228px
+.join-now-btn {
+  max-width: 228px;
+  @include screen-sm {
+    max-width: 100%;
+  }
 }
 .trustpilot {
   @extend %flex-a-j-center;
@@ -1344,9 +1378,9 @@
     font-weight: $tellwut--fw-regular;
     max-width: 200px;
     text-align: center;
-    margin: 0 auto;  
+    margin: 0 auto;
     @extend %lineClamp;
-    -webkit-line-clamp:5;  
+    -webkit-line-clamp: 5;
     @include screen-sm {
       font-size: $tellwut--fz-12;
       line-height: $tellwut--lh-18;

@@ -15,6 +15,61 @@ ul {
   padding: 0;
 }
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 .radio-wrapper, .footer--row .follow-us-links ul, .footer--row .footer-row-stats .col.survey-count .footer--stats {
   display: flex;
 }
@@ -38,6 +93,7 @@ ul {
 html,
 body {
   font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -112,6 +168,7 @@ html {
   background-color: transparent;
   text-decoration: none;
   color: #282828;
+  transition: 0.2s all;
 }
 .btn.btn-link.lk-btn:disabled, .btn.btn-link.lk-btn:disabled:hover, .btn.btn-link.lk-btn[href=""], .btn.btn-link.lk-btn[href=""]:hover {
   color: #BFBFBF;
@@ -121,6 +178,7 @@ html {
 }
 .btn.btn-link.lk-btn:hover {
   color: #2553C2;
+  text-decoration: none;
 }
 
 .btn-underline-plain {
@@ -131,6 +189,7 @@ html {
   text-transform: uppercase;
   line-height: 2rem;
   color: #2553C2;
+  transition: 0.2s all;
 }
 .btn-underline-plain:disabled, .btn-underline-plain:disabled:hover, .btn-underline-plain[href=""], .btn-underline-plain[href=""]:hover {
   color: #7C98DB;
@@ -140,6 +199,7 @@ html {
 }
 .btn-underline-plain:hover {
   color: #1376DE;
+  text-decoration: none;
 }
 
 .form-control {
@@ -569,6 +629,7 @@ footer {
   text-decoration: none;
   color: #282828;
   color: #282828;
+  transition: 0.2s all;
 }
 .footer--row .footer-row-links > .col .footer-link-desc a:disabled, .footer--row .footer-row-links > .col .footer-link-desc a:disabled:hover, .footer--row .footer-row-links > .col .footer-link-desc a[href=""], .footer--row .footer-row-links > .col .footer-link-desc a[href=""]:hover {
   color: #BFBFBF;
@@ -578,6 +639,7 @@ footer {
 }
 .footer--row .footer-row-links > .col .footer-link-desc a:hover {
   color: #2553C2;
+  text-decoration: none;
 }
 @media (max-width: 767px) {
   .footer--row .footer-row-links > .col .footer-link-desc a {
@@ -733,13 +795,13 @@ footer {
   margin-right: 0;
 }
 .footer--row .footer-row-stats .col.quick-links ul li a {
-  color: #2553C2;
   font-size: 1rem;
   text-decoration-line: underline;
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1.8rem;
   color: #2553C2;
+  transition: 0.2s all;
 }
 .footer--row .footer-row-stats .col.quick-links ul li a:disabled, .footer--row .footer-row-stats .col.quick-links ul li a:disabled:hover, .footer--row .footer-row-stats .col.quick-links ul li a[href=""], .footer--row .footer-row-stats .col.quick-links ul li a[href=""]:hover {
   color: #7C98DB;
@@ -749,6 +811,7 @@ footer {
 }
 .footer--row .footer-row-stats .col.quick-links ul li a:hover {
   color: #1376DE;
+  text-decoration: none;
 }
 @media (max-width: 767px) {
   .footer--row .footer-row-stats .col.quick-links ul li a {

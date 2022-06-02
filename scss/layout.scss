@@ -8,6 +8,7 @@
 html,
 body {
   font-family: $tellwut--ff-default;
+  -webkit-font-smoothing:antialiased ;
 }
 html {
   font-size: 10px;
@@ -685,8 +686,7 @@ footer {
             &:last-child {
               margin-right: 0;
             }
-            a {
-              color: $tellwut--theme-blue;
+            a { 
               font-size: $tellwut--fz-10;
               text-decoration-line: underline;
               text-transform: uppercase;

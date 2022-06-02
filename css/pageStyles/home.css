@@ -212,13 +212,22 @@
   color: #fff;
   background-color: #1877F2;
 }
+.quick-glance--row .community-social-login .btn-facebook:hover {
+  background-color: rgba(24, 119, 242, 0.8);
+}
 .quick-glance--row .community-social-login .btn-google {
   color: #fff;
   background-color: #EA4335;
 }
+.quick-glance--row .community-social-login .btn-google:hover {
+  background-color: rgba(234, 67, 53, 0.8);
+}
 .quick-glance--row .community-social-login .btn-apple {
   background-color: #fff;
   color: #000;
+}
+.quick-glance--row .community-social-login .btn-apple:hover {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .quick-glance--row .community-login {
   margin-top: 46px;
@@ -241,6 +250,10 @@
   font-size: 1.4rem;
   text-transform: uppercase;
   text-decoration: none;
+  transition: 0.2s all;
+}
+.quick-glance--row .community-login a:hover {
+  color: #E7E8ED;
 }
 .quick-glance--row .join-prompt {
   height: 100%;
@@ -394,6 +407,11 @@
     flex: 1 0 0%;
   }
 }
+@media (max-width: 1264px) {
+  .enquire-section .social-slider {
+    max-width: 100%;
+  }
+}
 @media (max-width: 767px) {
   .enquire-section .social-slider {
     order: 2;
@@ -526,16 +544,13 @@
 .enquire-section .blog-slider {
   border: 1px solid #EEEFF2;
   padding: 0;
+  margin-top: 20px;
 }
-@media (min-width: 1200px) {
+@media (min-width: 1264px) {
   .enquire-section .blog-slider {
     margin-left: 20px;
     flex: 1 0 0%;
-  }
-}
-@media (max-width: 1200px) {
-  .enquire-section .blog-slider {
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 @media (max-width: 767px) {
@@ -548,6 +563,20 @@
 .enquire-section .blog-slider--left {
   position: relative;
   max-width: 385px;
+  flex-shrink: 0;
+  height: 342px;
+}
+@media (max-width: 1264px) {
+  .enquire-section .blog-slider--left {
+    max-width: 525px;
+    height: 432px;
+  }
+}
+@media (max-width: 1200px) {
+  .enquire-section .blog-slider--left {
+    max-width: 365px;
+    height: 432px;
+  }
 }
 @media (min-width: 767px) {
   .enquire-section .blog-slider--left:hover .blog-slider--desc {
@@ -560,18 +589,18 @@
     display: inline-block;
   }
 }
+.enquire-section .blog-slider--left .blog-slider--img {
+  height: 100%;
+}
+.enquire-section .blog-slider--left .blog-slider--img img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
 @media (max-width: 767px) {
   .enquire-section .blog-slider--left {
     height: 176px;
     max-width: 100%;
-  }
-  .enquire-section .blog-slider--left .blog-slider--img {
-    height: 100%;
-  }
-  .enquire-section .blog-slider--left .blog-slider--img img {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
   }
 }
 .enquire-section .blog-slider--right {
@@ -743,6 +772,16 @@
   padding: 18px;
   width: 100%;
 }
+@media (max-width: 1264px) {
+  .enquire-section .blog-slider--footer__left {
+    max-width: 465px;
+  }
+}
+@media (max-width: 1200px) {
+  .enquire-section .blog-slider--footer__left {
+    max-width: 365px;
+  }
+}
 @media (max-width: 767px) {
   .enquire-section .blog-slider--footer__left {
     max-width: 100%;
@@ -910,11 +949,18 @@
   width: 100%;
   background-color: #F1FFFA;
 }
-@media (max-width: 1264px) {
+@media (max-width: 1200px) {
+  .review-rewards .trustpilot {
+    max-width: 50%;
+    margin-top: 0;
+    margin-right: 20px;
+  }
+}
+@media (max-width: 992px) {
   .review-rewards .trustpilot {
     max-width: 100%;
-    margin-top: 20px;
     margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 .review-rewards .review-user {
@@ -923,10 +969,9 @@
   max-width: 351px;
   width: 100%;
 }
-@media (max-width: 1264px) {
+@media (max-width: 1200px) {
   .review-rewards .review-user {
-    max-width: 550px;
-    margin-top: 20px;
+    max-width: 50%;
   }
 }
 @media (max-width: 992px) {
@@ -1100,9 +1145,11 @@
   max-width: 515px;
   width: 100%;
 }
-@media (max-width: 992px) {
+@media (max-width: 1200px) {
   .review-rewards .rewards-slider {
     max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 767px) {
@@ -1234,6 +1281,11 @@
 
 .join-now-btn {
   max-width: 228px;
+}
+@media (max-width: 767px) {
+  .join-now-btn {
+    max-width: 100%;
+  }
 }
 
 .trustpilot {
