@@ -1,7 +1,13 @@
 $tellwut--primary:#197BFF;
+
 $tellwut--theme-blue:#2553C2;
+$tellwut--theme-blue-hover:#1376DE;
+$tellwut--theme-blue-disabled:#7C98DB;
+
 $tellwut--theme-blue-light:#0939AC;
 $tellwut--theme-blue-light-2:#5AA1ED;
+$tellwut--theme-blue-light-3:#3C6CE0;
+$tellwut--theme-blue-light-4:#9DB0DE;
 $tellwut--theme-blue-dark:#222A7F;
 $tellwut--theme-blue-dark-2:#363F95;
 $tellwut--theme-blue-dark-3:#1F287C; 
@@ -17,6 +23,9 @@ $tellwut-radio-bg:#E9F4FF;
 $tellwut-shadow-shade-2:#DAECFF;
 $tellwut-primary-shadow-1:#3F97F2;
 $tellwut-orange:#F89C03;
+$tellwut-orange-hover:#FFB439;
+$tellwut-orange-disabled:#FBCD81;
+
 // common variables
 $white:#fff;
 $black:#000;
@@ -24,3 +33,48 @@ $text-color:#282828;
 $facebook-blue:#1877F2;
 $google-red:#EA4335;
 $trust-green:#F1FFFA;
+$text-disabled-shade-1:#BFBFBF;
+
+
+$social-shade-grey:#33415C;
+$social-shade-bg:#DDE1E7;
+$social-shade-bg-disabled:#EDEFF2;
+
+
+
+$tellwut--theme-blue-btn:(
+    "default":$tellwut--theme-blue,
+    "hover":$tellwut--theme-blue-hover,
+    "disabled":$tellwut--theme-blue-disabled,
+);
+
+
+$tellwut-orange-btn:(
+    "default":$tellwut-orange,
+    "hover":$tellwut-orange-hover,
+    "disabled":$tellwut-orange-disabled,
+);
+
+$tellwut-link-btn:(
+    "default":$text-color,
+    "hover":$tellwut--theme-blue,
+    "disabled":$text-disabled-shade-1,
+);
+
+
+$tellwut-dark-blue-btn:(
+    "default":$tellwut--theme-blue-light,
+    "hover":$tellwut--theme-blue-light-3,
+    "disabled":$tellwut--theme-blue-light-4,
+);
+$tellwut--social:(
+    "default-fill":$social-shade-grey,
+    "default-bg":$social-shade-bg,
+
+    "hover-fill":$white,
+    "hover-bg":$tellwut--theme-blue,
+
+    "disabled-fill":$text-disabled-shade-1,
+    "disabled-bg":$social-shade-bg-disabled,
+)
+

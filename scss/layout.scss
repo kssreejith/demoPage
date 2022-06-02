@@ -41,16 +41,13 @@ body {
       text-transform: uppercase;
       letter-spacing: 0.03em;
       font-size: $tellwut--fz-14;
-      font-weight: $tellwut--fw-semibold;
-      background-color: $tellwut--theme-blue;
+      font-weight: $tellwut--fw-semibold; 
       max-height: 38px;
+      border: 0;
+      @include buttonStates($tellwut--theme-blue-btn); 
       &.-orange {
-        background-color: $tellwut-orange;
-        border-color: $tellwut-orange;
         color: $black;
-        &:focus {
-          box-shadow: 0 0 0 0.25rem rgba($color: $tellwut-orange, $alpha: 0.5);
-        }
+        @include buttonStates($tellwut-orange-btn);
       }
     }
   }
@@ -66,8 +63,8 @@ body {
       font-weight: $tellwut--fw-medium;
       max-height: 38px;
       background-color: transparent;
-      text-decoration: none;
-      color: $tellwut--text;
+      text-decoration: none; 
+      @include buttonStates($tellwut-link-btn,'text');
     }
   }
 }
@@ -78,8 +75,8 @@ body {
   letter-spacing: 0.03em;
   text-decoration: underline;
   text-transform: uppercase;
-  line-height: $tellwut--lh-20;
-  color: $tellwut--theme-blue;
+  line-height: $tellwut--lh-20; 
+  @include buttonStates($tellwut--theme-blue-btn,'text'); 
 }
 
 //forms
@@ -396,7 +393,9 @@ footer {
           svg {
             max-width: 28px;
             max-height: 28px;
+            
           }
+          @include buttonStates($tellwut--social,'svgBtn'); 
         }
       }
     }
@@ -406,7 +405,7 @@ footer {
     padding-top: 28px;
     padding-bottom: 63px;
     border-bottom: 1px solid $tellwut-border-shade-2;
-    margin-bottom: 21px;
+    margin-bottom: 26px;
     .accordion-flush {
       .accordion-item {
         background-color: transparent;
@@ -532,6 +531,7 @@ footer {
         a {
           text-decoration: none; 
           color: $text-color;
+          @include buttonStates($tellwut-link-btn,'text'); 
           @include screen-sm{
             font-size: $tellwut--fz-14;
             line-height: $tellwut--lh-18;
@@ -692,6 +692,7 @@ footer {
               text-transform: uppercase;
               font-weight: $tellwut--fw-semibold;
               line-height: $tellwut--lh-18;
+              @include buttonStates($tellwut--theme-blue-btn,'text'); 
               @include screen-sm {
                 line-height: $tellwut--lh-18;
                 font-size: $tellwut--fz-14;

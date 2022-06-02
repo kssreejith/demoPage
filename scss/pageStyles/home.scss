@@ -383,7 +383,7 @@
     background-color: $tellwut-bg-gray;
 
     @include min-screen-lg {
-      max-width: 550px;
+      max-width: 515px;
       width: 100%;
       flex: 1 0 0%;
     }
@@ -412,11 +412,12 @@
 
       &--right {
         width: 100%;
-        padding: 59px 23px 60px 18px;
+        padding: 59px 23px 39px 18px;
         background-image: url("../../assets/temp-images/LogoPattern.png");
         background-repeat: no-repeat;
         background-size: contain;
         color: $tellwut--text;
+        background-position: 1px;
 
         @include screen-lg {
           background-size: cover;
@@ -462,7 +463,7 @@
           font-size: $tellwut--fz-14;
           line-height: $tellwut--lh-21;
           font-weight: $tellwut--fw-regular;
-          margin-bottom: 66px;
+          margin-bottom: 44px;
 
           @include screen-sm {
             text-align: center;
@@ -488,7 +489,8 @@
       @extend %flex-a-item-center;
       position: absolute;
       bottom: 50px;
-      right: 150px;
+      right: calc(50% - 131px);
+      transform: translateX(50%);
       z-index: 1;
       left: auto;
       width: auto;
@@ -801,12 +803,12 @@
         }
 
         .btn-dark-fit {
-          height: 100%;
-          background-color: $tellwut--theme-blue;
+          height: 100%; 
           border-radius: 0;
           max-width: 122px;
           width: 100%;
           padding: 20px 11px 20px 24px;
+          @include buttonStates($tellwut--theme-blue-btn); 
 
           @include screen-sm {
             padding: 8px 17px;
@@ -814,11 +816,11 @@
           }
         }
 
-        .btn-primary-fit {
-          background-color: $tellwut--theme-blue-light;
+        .btn-primary-fit { 
           border-radius: 0;
           width: 100%;
           padding: 20px 11px 20px 24px;
+          @include buttonStates($tellwut-dark-blue-btn); 
 
           @include screen-sm {
             padding: 8px 4px 8px 18px;
@@ -917,7 +919,7 @@
   }
 
   .trustpilot {
-    max-width: 323px;
+    max-width: 355px;
     width: 100%;
     background-color: $trust-green;
 
@@ -1124,7 +1126,7 @@
     padding: 31px 53px 34px;
     @extend %flex;
     @extend %flex-column;
-    max-width: 550px;
+    max-width: 515px;
     width: 100%;
 
     @include screen-md {

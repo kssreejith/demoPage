@@ -389,7 +389,7 @@
 }
 @media (min-width: 1200px) {
   .enquire-section .social-slider {
-    max-width: 550px;
+    max-width: 515px;
     width: 100%;
     flex: 1 0 0%;
   }
@@ -415,11 +415,12 @@
 }
 .enquire-section .social-slider__item--right {
   width: 100%;
-  padding: 59px 23px 60px 18px;
+  padding: 59px 23px 39px 18px;
   background-image: url("../../assets/temp-images/LogoPattern.png");
   background-repeat: no-repeat;
   background-size: contain;
   color: #282828;
+  background-position: 1px;
 }
 @media (max-width: 1200px) {
   .enquire-section .social-slider__item--right {
@@ -467,7 +468,7 @@
   font-size: 1.4rem;
   line-height: 2.1rem;
   font-weight: 400;
-  margin-bottom: 66px;
+  margin-bottom: 44px;
 }
 @media (max-width: 767px) {
   .enquire-section .social-slider__item--right .ss-ans {
@@ -490,7 +491,8 @@
 .enquire-section .social-slider--pagination {
   position: absolute;
   bottom: 50px;
-  right: 150px;
+  right: calc(50% - 131px);
+  transform: translateX(50%);
   z-index: 1;
   left: auto;
   width: auto;
@@ -787,11 +789,22 @@
 }
 .enquire-section .blog-slider--footer__right .btn-dark-fit {
   height: 100%;
-  background-color: #2553C2;
   border-radius: 0;
   max-width: 122px;
   width: 100%;
   padding: 20px 11px 20px 24px;
+  background-color: #2553C2;
+}
+.enquire-section .blog-slider--footer__right .btn-dark-fit:disabled, .enquire-section .blog-slider--footer__right .btn-dark-fit:disabled:hover {
+  background-color: #7C98DB;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.enquire-section .blog-slider--footer__right .btn-dark-fit:focus {
+  box-shadow: 0 0 0 0.25rem rgba(37, 83, 194, 0.5);
+}
+.enquire-section .blog-slider--footer__right .btn-dark-fit:hover {
+  background-color: #1376DE;
 }
 @media (max-width: 767px) {
   .enquire-section .blog-slider--footer__right .btn-dark-fit {
@@ -800,10 +813,21 @@
   }
 }
 .enquire-section .blog-slider--footer__right .btn-primary-fit {
-  background-color: #0939AC;
   border-radius: 0;
   width: 100%;
   padding: 20px 11px 20px 24px;
+  background-color: #0939AC;
+}
+.enquire-section .blog-slider--footer__right .btn-primary-fit:disabled, .enquire-section .blog-slider--footer__right .btn-primary-fit:disabled:hover {
+  background-color: #9DB0DE;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.enquire-section .blog-slider--footer__right .btn-primary-fit:focus {
+  box-shadow: 0 0 0 0.25rem rgba(9, 57, 172, 0.5);
+}
+.enquire-section .blog-slider--footer__right .btn-primary-fit:hover {
+  background-color: #3C6CE0;
 }
 @media (max-width: 767px) {
   .enquire-section .blog-slider--footer__right .btn-primary-fit {
@@ -882,7 +906,7 @@
   margin-right: 0;
 }
 .review-rewards .trustpilot {
-  max-width: 323px;
+  max-width: 355px;
   width: 100%;
   background-color: #F1FFFA;
 }
@@ -1073,7 +1097,7 @@
 }
 .review-rewards .rewards-slider {
   padding: 31px 53px 34px;
-  max-width: 550px;
+  max-width: 515px;
   width: 100%;
 }
 @media (max-width: 992px) {

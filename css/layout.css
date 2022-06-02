@@ -70,16 +70,35 @@ html {
   letter-spacing: 0.03em;
   font-size: 1.4rem;
   font-weight: 600;
-  background-color: #2553C2;
   max-height: 38px;
+  border: 0;
+  background-color: #2553C2;
+}
+.btn.btn-primary.pm-btn:disabled, .btn.btn-primary.pm-btn:disabled:hover {
+  background-color: #7C98DB;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.btn.btn-primary.pm-btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(37, 83, 194, 0.5);
+}
+.btn.btn-primary.pm-btn:hover {
+  background-color: #1376DE;
 }
 .btn.btn-primary.pm-btn.-orange {
-  background-color: #F89C03;
-  border-color: #F89C03;
   color: #000;
+  background-color: #F89C03;
+}
+.btn.btn-primary.pm-btn.-orange:disabled, .btn.btn-primary.pm-btn.-orange:disabled:hover {
+  background-color: #FBCD81;
+  opacity: 1;
+  cursor: not-allowed;
 }
 .btn.btn-primary.pm-btn.-orange:focus {
   box-shadow: 0 0 0 0.25rem rgba(248, 156, 3, 0.5);
+}
+.btn.btn-primary.pm-btn.-orange:hover {
+  background-color: #FFB439;
 }
 .btn.btn-link.lk-btn {
   border-radius: 0;
@@ -94,6 +113,15 @@ html {
   text-decoration: none;
   color: #282828;
 }
+.btn.btn-link.lk-btn:disabled, .btn.btn-link.lk-btn:disabled:hover, .btn.btn-link.lk-btn[href=""], .btn.btn-link.lk-btn[href=""]:hover {
+  color: #BFBFBF;
+  pointer-events: none;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.btn.btn-link.lk-btn:hover {
+  color: #2553C2;
+}
 
 .btn-underline-plain {
   font-weight: 600;
@@ -103,6 +131,15 @@ html {
   text-transform: uppercase;
   line-height: 2rem;
   color: #2553C2;
+}
+.btn-underline-plain:disabled, .btn-underline-plain:disabled:hover, .btn-underline-plain[href=""], .btn-underline-plain[href=""]:hover {
+  color: #7C98DB;
+  pointer-events: none;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.btn-underline-plain:hover {
+  color: #1376DE;
 }
 
 .form-control {
@@ -390,11 +427,27 @@ footer {
   max-width: 28px;
   max-height: 28px;
 }
+.footer--row .follow-us-links ul li .footer-link-img svg {
+  transition: 0.2s all;
+  color: #DDE1E7;
+  fill: #33415C;
+}
+.footer--row .follow-us-links ul li .footer-link-img:disabled, .footer--row .follow-us-links ul li .footer-link-img:disabled:hover, .footer--row .follow-us-links ul li .footer-link-img[href=""], .footer--row .follow-us-links ul li .footer-link-img[href=""]:hover {
+  cursor: not-allowed;
+}
+.footer--row .follow-us-links ul li .footer-link-img:disabled svg, .footer--row .follow-us-links ul li .footer-link-img:disabled:hover svg, .footer--row .follow-us-links ul li .footer-link-img[href=""] svg, .footer--row .follow-us-links ul li .footer-link-img[href=""]:hover svg {
+  color: #EDEFF2;
+  fill: #BFBFBF;
+}
+.footer--row .follow-us-links ul li .footer-link-img:hover svg {
+  color: #2553C2;
+  fill: #fff;
+}
 .footer--row .footer-row-links {
   padding-top: 28px;
   padding-bottom: 63px;
   border-bottom: 1px solid #E7E8ED;
-  margin-bottom: 21px;
+  margin-bottom: 26px;
 }
 .footer--row .footer-row-links .accordion-flush .accordion-item {
   background-color: transparent;
@@ -515,6 +568,16 @@ footer {
 .footer--row .footer-row-links > .col .footer-link-desc a {
   text-decoration: none;
   color: #282828;
+  color: #282828;
+}
+.footer--row .footer-row-links > .col .footer-link-desc a:disabled, .footer--row .footer-row-links > .col .footer-link-desc a:disabled:hover, .footer--row .footer-row-links > .col .footer-link-desc a[href=""], .footer--row .footer-row-links > .col .footer-link-desc a[href=""]:hover {
+  color: #BFBFBF;
+  pointer-events: none;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.footer--row .footer-row-links > .col .footer-link-desc a:hover {
+  color: #2553C2;
 }
 @media (max-width: 767px) {
   .footer--row .footer-row-links > .col .footer-link-desc a {
@@ -676,6 +739,16 @@ footer {
   text-transform: uppercase;
   font-weight: 600;
   line-height: 1.8rem;
+  color: #2553C2;
+}
+.footer--row .footer-row-stats .col.quick-links ul li a:disabled, .footer--row .footer-row-stats .col.quick-links ul li a:disabled:hover, .footer--row .footer-row-stats .col.quick-links ul li a[href=""], .footer--row .footer-row-stats .col.quick-links ul li a[href=""]:hover {
+  color: #7C98DB;
+  pointer-events: none;
+  opacity: 1;
+  cursor: not-allowed;
+}
+.footer--row .footer-row-stats .col.quick-links ul li a:hover {
+  color: #1376DE;
 }
 @media (max-width: 767px) {
   .footer--row .footer-row-stats .col.quick-links ul li a {
