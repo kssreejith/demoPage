@@ -1,0 +1,12 @@
+/* Plugin CSS Imports */
+@import url('../plugins/bootstrap/css/bootstrap.min.css');
+@import url('../plugins/swiperjs/swiper-bundle.min.css');
+
+/* Core CSS Imports */
+@import url('./core/variables.css');
+@import url('./core/fonts.css');
+@import url('./layout.css');
+
+/* Page wise CSS Imports */
+/* Note: use below urls in page itself for performance */
+@import url('./pageStyles/home.css'); 

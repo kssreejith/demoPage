@@ -1,0 +1,134 @@
+@use './variables.scss' as *;
+// mixins , extends , and other scss features ONLY
+%flex {
+    display: flex;
+}
+
+%flex-column {
+    flex-direction: column;
+}
+
+%flex-a-item-center {
+    display: flex;
+    align-items: center;
+}
+
+
+%flex-j-center {
+    display: flex;
+    justify-content: center;
+}
+
+%flex-a-item-start {
+    display: flex;
+    align-items: flex-start;
+}
+
+%flex-f-column {
+    display: flex;
+    flex-direction: column;
+}
+%flex-a-end {
+    align-items: flex-end;
+}
+%flex-f-column-a-item-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+%flex-a-j-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-wrap {
+    flex-wrap: wrap;
+}
+
+%flex-inline {
+    display: inline-flex;
+}
+
+%truncate {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+%lineClamp {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+%flex-height-100-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+@mixin darkMode(){
+    .dark-mode &{
+        @content;
+    }
+}
+@mixin scrollBarType1 {
+
+    /* width */
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        background: $white;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        background: $tellwut-border-shade-1;
+        border-radius: 100px;
+    }
+
+    /* Handle on hover */
+    &::-webkit-scrollbar-thumb:hover {
+        background: $tellwut-shadow-shade;
+    }
+}
+@mixin screen-lg-custom-1264{
+    @media (max-width:1264px){
+        @content;
+    }
+}
+@mixin screen-lg{
+    @media (max-width:1200px){
+        @content;
+    }
+}
+@mixin min-screen-lg{
+    @media (min-width:1200px){
+        @content;
+    }
+} 
+@mixin screen-md{
+    @media (max-width:992px){
+        @content;
+    }
+} 
+@mixin min-screen-md{
+    @media (min-width:992px){
+        @content;
+    }
+} 
+@mixin min-screen-sm{
+    @media (min-width:767px){
+        @content;
+    }
+} 
+@mixin screen-sm{
+    @media (max-width:767px){
+        @content;
+    }
+} 

@@ -1,0 +1,1398 @@
+@use "../core/variables.scss" as *;
+@use "../core/mixins-extend.scss" as *;
+@use "../core/typography.scss" as *;
+
+.action-review {
+  margin-top: auto;
+  @extend %flex-a-j-center;
+
+  @include screen-sm {
+    margin-top: 0;
+  }
+}
+
+.quick-glance--row {
+  background-color: $tellwut--theme-blue;
+  padding: 34px 35px;
+
+  @include min-screen-lg {
+    flex-wrap: nowrap;
+
+    >.col {
+      margin-right: 45px;
+      padding: 0;
+
+      &:first-child {
+        max-width: 371px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &:nth-child(2) {
+        max-width: 323px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  @include screen-lg {
+    >.col {
+      flex: 0 0 auto;
+      width: 100%;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include screen-sm {
+    padding: 0;
+    border-top: 1px solid $tellwut-border-shade-1;
+
+    >.col {
+      padding: 24px 18px;
+      margin: 0;
+
+      .join-prompt {
+        display: grid;
+        grid-template-columns: minmax(100px, 162px) 1fr;
+        grid-template-rows: 1fr 1fr;
+        padding: 24px 18px;
+
+        .join-image {
+          grid-area: span 2;
+          max-width: 96px;
+        }
+      }
+
+      &:nth-child(2) {
+        padding: 0;
+      }
+    }
+  }
+
+  .community-tab {
+    @extend %flex-f-column-a-item-center;
+
+    .community-title {
+      font-size: $tellwut--fz-28;
+      line-height: 4.8rem;
+      color: $white;
+      font-weight: $tellwut--fw-semibold;
+      margin-bottom: 6px;
+      text-align: center;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-20;
+        line-height: 3rem;
+      }
+    }
+
+    .community-subTitle {
+      margin-bottom: 38px;
+      font-size: $tellwut--fz-14;
+
+      @include screen-sm {
+        margin-bottom: 28px;
+      }
+
+      span {
+        font-size: $tellwut--fz-14;
+        line-height: $tellwut--lh-21;
+        text-align: center;
+        color: $white;
+        font-weight: $tellwut--fw-regular;
+        display: block;
+      }
+    }
+  }
+
+  .input-group-ps.community-input {
+    max-width: 371px;
+    width: 100%;
+  }
+
+  .community-or {
+    color: $white;
+    font-weight: $tellwut--fw-light;
+    line-height: $tellwut--lh-21;
+    font-size: $tellwut--fz-14;
+    margin: 24px 0 14px;
+    text-transform: uppercase;
+
+    @include screen-sm {
+      margin: 12px 0;
+    }
+  }
+
+  .community-social-login {
+    @extend %flex;
+
+    .social-group {
+      @extend %flex;
+
+      @include screen-sm {
+        button {
+          min-width: 36px;
+          padding: 8px;
+
+          span {
+            display: none;
+          }
+
+          svg {
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .btn {
+      margin-right: 9px;
+      @extend %flex-a-item-center;
+      font-weight: $tellwut--fw-medium;
+      line-height: $tellwut--lh-18;
+      text-transform: uppercase;
+      padding: 8px 12px;
+      min-width: 117px;
+      font-size: $tellwut--fz-12;
+      border-radius: 0;
+      @extend %flex-a-j-center;
+
+      @include screen-sm {
+        margin-right: 24px;
+      }
+
+      svg {
+        width: 20px;
+        height: 20px;
+        margin-right: 6px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    .btn-facebook {
+      color: $white;
+      background-color: $facebook-blue;
+    }
+
+    .btn-google {
+      color: $white;
+      background-color: $google-red;
+    }
+
+    .btn-apple {
+      background-color: $white;
+      color: $black;
+    }
+  }
+
+  .community-login {
+    margin-top: 46px;
+
+    @include screen-sm {
+      margin-top: 24px;
+    }
+
+    .already-act {
+      color: $white;
+      font-weight: $tellwut--fw-light;
+      line-height: $tellwut--lh-21;
+      font-size: $tellwut--fz-14;
+    }
+
+    a {
+      color: $white;
+      font-weight: $tellwut--fw-semibold;
+      line-height: $tellwut--lh-21;
+      font-size: $tellwut--fz-14;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+  }
+
+  .join-prompt {
+    height: 100%;
+    width: 100%;
+    padding: 42px 48px;
+    @extend %flex-a-j-center;
+    @extend %flex-column;
+    background-color: $tellwut--theme-blue-light;
+    background-image: url("../../assets/images/pattern-1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include screen-sm {
+      background-size: 124px;
+      background-position: right;
+    }
+
+    .join-image {
+      max-width: 136px;
+    }
+
+    .membership-survey {
+      margin-top: 34px;
+      @extend %flex-a-item-start;
+      margin-bottom: 12px;
+
+      @include screen-sm {
+        justify-content: space-between;
+        margin: 0;
+      }
+
+      &--item {
+        margin-right: 26px;
+        color: $white;
+        font-size: $tellwut--fz-12;
+        line-height: 2.5rem;
+
+        @include screen-sm {
+          flex-direction: column;
+          line-height: $tellwut--lh-16;
+        }
+
+        @extend %flex;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &__count {
+          font-weight: $tellwut--fw-semibold;
+        }
+
+        &__title {
+          font-weight: $tellwut--fw-light;
+          margin-left: 3px;
+          font-size: $tellwut--fz-12;
+          line-height: 2.5rem;
+
+          @include screen-sm {
+            margin-left: 0;
+            line-height: $tellwut--lh-16;
+          }
+        }
+      }
+    }
+
+    .pm-btn {
+      width: 100%;
+
+      @include screen-sm {
+        padding: 9px 10px;
+        min-width: auto;
+      }
+    }
+  }
+
+  .earn-rewards {
+    margin-left: 42px;
+
+    @include screen-sm {
+      margin-left: 0;
+    }
+
+    &--keypoints__icon {
+      margin-top: 4px;
+    }
+
+    &--title {
+      font-size: $tellwut--fz-28;
+      line-height: 3.9rem;
+      color: $white;
+      font-weight: $tellwut--fw-semibold;
+      margin-bottom: 24px;
+
+      @include screen-sm {
+        max-width: 204px;
+        font-size: $tellwut--fz-20;
+        line-height: 3rem;
+        margin-bottom: 18px;
+      }
+    }
+
+    &--keypoints {
+      &__point {
+        @extend %flex;
+        margin-bottom: 32px;
+        color: $white;
+
+        @include screen-sm {
+          margin-bottom: 14px;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      &__title {
+        font-size: $tellwut--fz-18;
+        font-weight: $tellwut--fw-semibold;
+        line-height: 2.7rem;
+        text-transform: capitalize;
+
+        @include screen-sm {
+          line-height: $tellwut--lh-21;
+          font-size: $tellwut--fz-14;
+        }
+      }
+
+      &__icon {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &__description {
+        font-size: $tellwut--fz-14;
+        font-weight: $tellwut--fw-regular;
+        line-height: $tellwut--lh-18;
+
+        @include screen-sm {
+          line-height: $tellwut--lh-18;
+          font-size: $tellwut--fz-12;
+        }
+      }
+
+      &-title-wrapper {
+        @extend %flex;
+        @extend %flex-column;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.enquire-section {
+  margin-top: 20px;
+
+  .social-slider {
+    padding: 0;
+    position: relative;
+    border: 1px solid $tellwut-border-shade-1;
+    background-color: $tellwut-bg-gray;
+
+    @include min-screen-lg {
+      max-width: 550px;
+      width: 100%;
+      flex: 1 0 0%;
+    }
+
+    @include screen-sm {
+      order: 2;
+    }
+
+    &__item {
+      @extend %flex;
+
+      &--left {
+        width: 100%;
+        max-width: 250px;
+        padding: 22px 13px;
+        background-color: $white;
+
+        .ss-img {
+          max-width: 224px;
+        }
+
+        @include screen-sm {
+          display: none;
+        }
+      }
+
+      &--right {
+        width: 100%;
+        padding: 59px 23px 60px 18px;
+        background-image: url("../../assets/temp-images/LogoPattern.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        color: $tellwut--text;
+
+        @include screen-lg {
+          background-size: cover;
+        }
+
+        @include screen-sm {
+          background-size: 172px;
+          background-position: 100% 35%;
+          padding: 24px 34px 49px;
+          min-height: 254px;
+        }
+
+        .ss-title {
+          margin-bottom: 26px;
+          font-size: $tellwut--fz-20;
+          line-height: 3rem;
+          font-weight: $tellwut--fw-semibold;
+          text-transform: uppercase;
+
+          @include screen-sm {
+            font-size: $tellwut--fz-16;
+            line-height: 2.4rem;
+            margin-bottom: 12px;
+            text-align: center;
+          }
+        }
+
+        .ss-qn {
+          margin-bottom: 3px;
+          font-size: $tellwut--fz-18;
+          line-height: 2.7rem;
+          font-weight: $tellwut--fw-semibold;
+
+          @include screen-sm {
+            text-align: center;
+            font-size: $tellwut--fz-14;
+            line-height: $tellwut--lh-21;
+            margin-bottom: 4px;
+          }
+        }
+
+        .ss-ans {
+          font-size: $tellwut--fz-14;
+          line-height: $tellwut--lh-21;
+          font-weight: $tellwut--fw-regular;
+          margin-bottom: 66px;
+
+          @include screen-sm {
+            text-align: center;
+            font-size: $tellwut--fz-12;
+            line-height: $tellwut--lh-18;
+            margin-bottom: 22px;
+          }
+        }
+
+        .pm-btn {
+          font-weight: $tellwut--fw-semibold;
+          margin-bottom: 54px;
+
+          @include screen-sm {
+            margin: 0 auto 16px;
+            display: block;
+          }
+        }
+      }
+    }
+
+    &--pagination {
+      @extend %flex-a-item-center;
+      position: absolute;
+      bottom: 50px;
+      right: 150px;
+      z-index: 1;
+      left: auto;
+      width: auto;
+
+      @include screen-sm {
+        bottom: 31px;
+        right: 50%;
+        transform: translateX(50%);
+      }
+
+      .swiper-pagination-bullet {
+        all: unset;
+        background-color: rgba($color: $tellwut--text-gray, $alpha: 0.15);
+        width: 8px;
+        height: 8px;
+        border-radius: 50px;
+        margin-right: 12px;
+        display: block;
+        cursor: pointer;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &.swiper-pagination-bullet-active {
+          background-color: $tellwut--theme-blue-dark-2;
+          border: 3px solid $tellwut-shadow-shade;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+
+  .blog-slider {
+    border: 1px solid $tellwut-border-shade-1;
+    padding: 0;
+
+    @include min-screen-lg {
+      margin-left: 20px;
+      flex: 1 0 0%;
+    }
+
+    @include screen-lg {
+      margin-top: 20px;
+    }
+
+    @include screen-sm {
+      order: 1;
+      margin-bottom: 20px;
+      margin-top: 0;
+    }
+
+    &--left {
+      position: relative;
+      max-width: 385px;
+
+      @include min-screen-sm {
+        &:hover {
+          .blog-slider--desc {
+            max-height: 150px;
+          }
+
+          .inactive-state {
+            display: none;
+          }
+
+          .hover-state {
+            display: inline-block;
+          }
+        }
+      }
+
+      @include screen-sm {
+        height: 176px;
+        max-width: 100%;
+
+        .blog-slider--img {
+          height: 100%;
+
+          img {
+            height: 100%;
+            object-fit: cover;
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &--right {
+      max-height: 308px;
+      overflow: auto;
+      @include scrollBarType1;
+      margin-right: 23px;
+      margin-top: 20px;
+
+      @include screen-sm {
+        margin-right: 0;
+        max-height: 283px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        margin-bottom: 14px;
+        color: $text-color;
+        font-size: $tellwut--fz-14;
+        line-height: $tellwut--lh-18;
+      }
+
+      .bs--radio {
+        margin-bottom: 24px;
+        @extend %flex-column;
+        @extend %flex-a-item-start;
+      }
+    }
+
+    &--wrapper {
+      @extend %flex;
+
+      @include screen-sm {
+        flex-direction: column;
+      }
+    }
+
+    &--details {
+      padding: 0 20px 20px;
+    }
+
+    &--text {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 20px;
+      cursor: pointer;
+
+      @include screen-sm {
+        padding: 0 20px 13px;
+      }
+    }
+
+    &--shade {
+      background: linear-gradient(180.46deg,
+          #0e112e 0.39%,
+          rgba(54, 63, 149, 0.05) 63.2%);
+      transform: matrix(1, 0, 0, -1, 0, 0);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    &--title {
+      font-size: $tellwut--fz-20;
+      line-height: 3rem;
+      font-weight: $tellwut--fw-bold;
+      text-transform: uppercase;
+      color: $white;
+      @extend %lineClamp;
+      -webkit-line-clamp: 1;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-16;
+        line-height: 2.4rem;
+      }
+    }
+
+    &--subTitle {
+      font-size: $tellwut--fz-18;
+      line-height: 2.7rem;
+      font-weight: $tellwut--fw-bold;
+      color: $white;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-14;
+        line-height: $tellwut--lh-21;
+      }
+    }
+
+    &--desc {
+      font-size: $tellwut--fz-14;
+      line-height: $tellwut--lh-21;
+      font-weight: $tellwut--fw-medium;
+      color: $white;
+      margin-bottom: 6px;
+      display: -webkit-box;
+      // -webkit-line-clamp: 1;
+      // -webkit-box-orient: vertical;
+      overflow: hidden;
+      max-height: 21px;
+      transition: 0.3s all;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-12;
+        line-height: $tellwut--lh-18;
+        max-height: none;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    }
+
+    &--hover-prompt {
+      padding: 6px 9px;
+      background: rgba(40, 139, 241, 0.15);
+      border-radius: 4px;
+      width: auto;
+      text-decoration: none;
+      display: inline-block;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .inactive-state {
+        display: inline-block;
+      }
+
+      .hover-state {
+        display: none;
+      }
+
+      span {
+        margin-left: 5px;
+        font-weight: $tellwut--fw-medium;
+        font-size: $tellwut--fz-14;
+        line-height: $tellwut--lh-21;
+        letter-spacing: 0.03em;
+        color: $tellwut--theme-blue-light-2;
+      }
+
+      @include screen-sm {
+        padding: 3.5px 9px;
+
+        svg,
+        .inactive-state {
+          display: none;
+        }
+
+        .hover-state {
+          display: block;
+        }
+      }
+    }
+
+    &--footer {
+      @extend %flex;
+      background-color: $tellwut-bg-gray;
+
+      @include screen-sm {
+        flex-direction: column;
+      }
+
+      &__left {
+        max-width: 342px;
+        padding: 18px;
+        width: 100%;
+        @extend %flex;
+        @extend %flex-a-end;
+
+        @include screen-sm {
+          max-width: 100%;
+          align-items: center;
+          padding: 8px 18px;
+        }
+      }
+
+      &__right {
+        width: 100%;
+        @extend %flex;
+
+        .btn-main-text {
+          font-size: $tellwut--fz-18;
+          font-weight: $tellwut--fw-bold;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: $white;
+          @extend %flex-a-j-center;
+          justify-content: flex-start;
+          line-height: 2.7rem;
+
+          @include screen-sm {
+            font-size: $tellwut--fz-14;
+            line-height: $tellwut--lh-21;
+          }
+
+          svg {
+            margin-left: 8px;
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        .btn-main-subtext {
+          font-size: 0.9rem;
+          line-height: $tellwut--lh-14;
+          font-weight: $tellwut--fw-medium;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: $white;
+          text-align: left;
+
+          @include screen-sm {
+            margin-top: -4px;
+          }
+        }
+
+        .btn-dark-fit {
+          height: 100%;
+          background-color: $tellwut--theme-blue;
+          border-radius: 0;
+          max-width: 122px;
+          width: 100%;
+          padding: 20px 11px 20px 24px;
+
+          @include screen-sm {
+            padding: 8px 17px;
+            max-width: 111px;
+          }
+        }
+
+        .btn-primary-fit {
+          background-color: $tellwut--theme-blue-light;
+          border-radius: 0;
+          width: 100%;
+          padding: 20px 11px 20px 24px;
+
+          @include screen-sm {
+            padding: 8px 4px 8px 18px;
+          }
+        }
+      }
+
+      &-f-row {
+        max-width: 50%;
+
+        @include min-screen-sm {
+          max-width: 130px;
+        }
+      }
+    }
+
+    &--author {
+      font-weight: $tellwut--fw-bold;
+      font-size: $tellwut--fz-16;
+      line-height: 2.4rem;
+      margin-bottom: 1px;
+      @extend %truncate;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-14;
+        line-height: $tellwut--lh-21;
+        margin-bottom: 2px;
+      }
+    }
+
+    &--f-wrapper {
+      @extend %flex-inline;
+    }
+
+    &--f-date {
+      color: $tellwut--text-gray;
+      font-weight: $tellwut--fw-medium;
+      line-height: $tellwut--lh-21;
+      font-size: $tellwut--fz-14;
+      margin-right: 28px;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-12;
+        line-height: $tellwut--lh-18;
+      }
+    }
+
+    &--f-stats {
+      margin-left: auto;
+      @extend %flex;
+      @extend %flex-wrap;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: $tellwut--theme-blue-light;
+      }
+
+      .blog-stat-count {
+        color: $tellwut--theme-blue-light;
+        font-weight: $tellwut--fw-medium;
+        line-height: $tellwut--lh-21;
+        font-size: $tellwut--fz-14;
+        margin-left: 3px;
+      }
+    }
+
+    &--f-comment {
+      @extend %flex-a-item-center;
+      padding-right: 10px;
+      border-right: 1px solid $tellwut-border-shade-1;
+
+      &:not(:first-child) {
+        padding-left: 13px;
+      }
+
+      &:last-child {
+        padding-right: 0;
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.review-rewards {
+  margin-top: 20px;
+
+  >.col {
+    @extend %flex;
+    border: 1px solid $tellwut-border-shade-1;
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .trustpilot {
+    max-width: 323px;
+    width: 100%;
+    background-color: $trust-green;
+
+    @include screen-lg-custom-1264 {
+      max-width: 100%;
+      margin-top: 20px;
+      margin-right: 0;
+    }
+  }
+
+  .review-user {
+    padding: 31px 25px 43px;
+    @extend %flex;
+    @extend %flex-column;
+    background-color: $trust-green;
+    max-width: 351px;
+    width: 100%;
+
+    @include screen-lg-custom-1264 {
+      max-width: 550px;
+      margin-top: 20px;
+    }
+
+    @include screen-md {
+      max-width: 100%;
+    }
+
+    @include screen-sm {
+      padding: 24px 34px;
+    }
+
+    .reviewers-name {
+      font-size: $tellwut--fz-16;
+      line-height: 2.4rem;
+      text-align: center;
+      color: $text-color;
+      font-weight: $tellwut--fw-semibold;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-14;
+        line-height: $tellwut--lh-21;
+      }
+    }
+
+    .reviewers-role {
+      font-weight: $tellwut--fw-regular;
+      font-style: italic;
+      font-size: $tellwut--fz-14;
+      line-height: $tellwut--lh-21;
+      text-align: center;
+      color: $text-color;
+      margin-bottom: 30px;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-12;
+        line-height: $tellwut--lh-18;
+        margin-bottom: 12px;
+      }
+    }
+
+    .reviewers-slide {
+      @extend %flex-a-j-center;
+      margin-bottom: 39px;
+      min-height: 64px;
+
+      @include screen-sm {
+        margin-bottom: 20px;
+      }
+
+      &__item {
+        all: unset;
+        border-radius: 50px;
+        margin-right: 12px;
+        transition: transform 0.3s;
+        cursor: pointer;
+        max-height: 60px;
+        max-width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover:not(.swiper-pagination-bullet-active) {
+          transform: scale(1.1);
+        }
+
+        &.swiper-pagination-bullet-active {
+          background-color: $tellwut-shadow-shade-2;
+          border: 2px solid $tellwut-primary-shadow-1;
+
+          img {
+            width: 58px;
+            height: 58px;
+            margin: 4px;
+
+            @include screen-sm {
+              width: 48px;
+              height: 48px;
+              margin: 3px;
+            }
+          }
+        }
+
+        img {
+          width: 37px;
+          height: 37px;
+          border-radius: 50px;
+          transition: all 0.2s;
+
+          @include screen-sm {
+            height: 27px;
+            width: 27px;
+          }
+        }
+
+        @include screen-sm {
+          max-height: 49px;
+          max-width: 49px;
+        }
+      }
+    }
+
+    .reviewers-slide-content {
+      @extend %flex-height-100-center;
+
+      .slide-review {
+        width: 100%;
+      }
+    }
+
+    .review {
+      &--quote {
+        position: relative;
+        @extend %flex-column;
+
+        svg {
+          max-width: 25px;
+          max-height: 25px;
+
+          @include screen-sm {
+            max-width: 20px;
+            max-height: 20px;
+          }
+        }
+      }
+
+      &--begin-quote {
+        margin-right: auto;
+        position: absolute;
+        top: -20px;
+        left: 0;
+
+        @include screen-sm {
+          top: -3px;
+        }
+      }
+
+      &--text {
+        font-size: $tellwut--fz-14;
+        line-height: $tellwut--lh-21;
+        color: $text-color;
+        font-weight: $tellwut--fw-light;
+        font-style: italic;
+        text-align: center;
+        max-width: 227px;
+        margin: 0 auto;
+        margin-bottom: 28px;
+
+        @include screen-sm {
+          font-size: $tellwut--fz-12;
+          line-height: $tellwut--lh-18;
+          max-width: calc(100% - 50px);
+          margin-bottom: 25px;
+        }
+      }
+
+      .other-reviews {
+        margin-top: 39px;
+        font-size: $tellwut--fz-14;
+        line-height: $tellwut--lh-21;
+        color: $text-color;
+        font-weight: $tellwut--fw-medium;
+        text-align: center;
+      }
+
+      &--end-quote {
+        position: absolute;
+        bottom: -17px;
+        right: 0;
+
+        @include screen-sm {
+          bottom: 1px;
+          position: absolute;
+        }
+
+        svg {
+          margin-left: auto;
+          display: block;
+        }
+      }
+    }
+  }
+
+  .rewards-slider {
+    padding: 31px 53px 34px;
+    @extend %flex;
+    @extend %flex-column;
+    max-width: 550px;
+    width: 100%;
+
+    @include screen-md {
+      max-width: 100%;
+    }
+
+    @include screen-sm {
+      padding: 24px 12px;
+    }
+  }
+
+  .reward-title {
+    font-weight: $tellwut--fw-semibold;
+    font-size: $tellwut--fz-20;
+    line-height: 3rem;
+    margin-bottom: 23px;
+    color: $tellwut--text;
+    text-transform: uppercase;
+    width: 100%;
+    text-align: center;
+
+    @include screen-sm {
+      font-size: $tellwut--fz-16;
+      line-height: 2.4rem;
+      margin-bottom: 15px;
+    }
+  }
+
+  .reward--section {
+    margin-bottom: 44px;
+    min-height: 84px;
+    @extend %flex-a-item-center;
+
+    @include screen-sm {
+      min-height: 64px;
+      margin-bottom: 28px;
+    }
+
+    &__title {
+      font-weight: $tellwut--fw-semibold;
+      font-size: $tellwut--fz-18;
+      line-height: 2.7rem;
+      color: $text-color;
+      text-transform: capitalize;
+      text-align: center;
+      margin-bottom: 28px;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-14;
+        line-height: $tellwut--lh-21;
+        margin-bottom: 4px;
+      }
+    }
+
+    &__desc {
+      font-weight: $tellwut--fw-regular;
+      font-size: $tellwut--fz-14;
+      line-height: $tellwut--lh-21;
+      color: $text-color;
+      margin-bottom: 34px;
+      text-align: center;
+
+      @include screen-sm {
+        font-size: $tellwut--fz-12;
+        line-height: $tellwut--lh-18;
+        // margin-bottom: 4px;
+      }
+    }
+
+    .swiper-slide {
+      &.swiper-slide-active {
+        img {
+          max-width: 122px;
+
+          @include screen-sm {
+            max-width: 78.5px;
+          }
+        }
+      }
+    }
+
+    &__item {
+      @extend %flex-a-j-center;
+
+      img {
+        width: 100%;
+        max-width: 91px;
+        transition: 0.5s all;
+
+        @include screen-sm {
+          max-width: 59px;
+        }
+      }
+    }
+  }
+
+  .slide-reward {
+    width: 100%;
+
+    .swiper-slide-active .reward--section__item::before {
+      background: rgba(0, 0, 0, 0.3);
+      filter: blur(10px);
+      content: "";
+      position: absolute;
+      width: 122px;
+      height: 23px;
+      bottom: -19px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include screen-sm {
+        width: 78.5px;
+      }
+    }
+  }
+
+  .pagination-reward-slider {
+    @extend %flex-a-j-center;
+
+    .swiper-pagination-bullet {
+      all: unset;
+      background-color: rgba($color: $tellwut--text-gray, $alpha: 0.15);
+      width: 8px;
+      height: 8px;
+      border-radius: 50px;
+      margin-right: 12px;
+      display: block;
+      cursor: pointer;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.swiper-pagination-bullet-active {
+        background-color: $tellwut--theme-blue-dark-2;
+        border: 3px solid $tellwut-shadow-shade;
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  .reward-section-page-goto {
+    @extend %flex-a-j-center;
+    margin-top: 37px;
+
+    @include screen-sm {
+      margin-top: 22px;
+    }
+  }
+}
+
+.trustpilot {
+  @extend %flex-a-j-center;
+  @extend %flex-column;
+  padding-top: 75px;
+  padding-bottom: 43px;
+  padding: 75px 25px 43px;
+
+  @include screen-sm {
+    padding: 24px 34px 20px;
+  }
+
+  &--logo {
+    margin-bottom: 24px;
+    max-width: 189px;
+
+    img {
+      width: 100%;
+    }
+
+    @include screen-sm {
+      margin-bottom: 16px;
+      max-width: 123px;
+    }
+  }
+
+  &--quote {
+    @extend %flex-column;
+    width: 100%;
+    position: relative;
+
+    @include screen-sm {
+      margin-top: 0;
+      flex-direction: row;
+    }
+
+    svg {
+      max-width: 25px;
+      max-height: 25px;
+
+      @include screen-sm {
+        max-width: 20px;
+        max-height: 20px;
+      }
+    }
+  }
+
+  &--begin-quote {
+    left: 0;
+    position: absolute;
+    top: -20px;
+
+    @include screen-sm {
+      top: -3px;
+    }
+  }
+
+  &--text {
+    font-size: $tellwut--fz-14;
+    line-height: $tellwut--lh-21;
+    color: $text-color;
+    font-weight: $tellwut--fw-regular;
+    max-width: 200px;
+    text-align: center;
+    margin: 0 auto;
+
+    @include screen-sm {
+      font-size: $tellwut--fz-12;
+      line-height: $tellwut--lh-18;
+      max-width: calc(100% - 50px);
+    }
+  }
+
+  .other-reviews {
+    margin-top: 39px;
+    font-size: $tellwut--fz-14;
+    line-height: $tellwut--lh-21;
+    color: $text-color;
+    font-weight: $tellwut--fw-medium;
+    text-align: center;
+
+    @include screen-sm {
+      margin-top: 24px;
+      margin-bottom: 26px;
+      font-size: $tellwut--fz-12;
+      line-height: $tellwut--lh-18;
+    }
+  }
+
+  &--end-quote {
+    position: absolute;
+    bottom: -17px;
+    top: auto;
+    right: 0;
+
+    @include screen-sm {
+      bottom: 1px;
+      position: absolute;
+      right: 0;
+    }
+
+    svg {
+      margin-left: auto;
+      display: block;
+    }
+  }
+
+  &--rating {
+    margin-bottom: 75px;
+
+    @include screen-sm {
+      margin-bottom: 18px;
+
+      img {
+        width: 100%;
+        max-width: 104px;
+      }
+    }
+  }
+}
